@@ -1,0 +1,31 @@
+{
+  "name": "electrum-cli",
+  "version": "0.1.0",
+  "description": "Quickly make requests to an Electrum servers in a simple CLI ",
+  "repository": "git@github.com:rkalis/electrum-cli.git",
+  "license": "MIT",
+  "author": "Rosco Kalis <roscokalis@gmail.com>",
+  "main": "index.js",
+  "bin": {
+    "electrum-cli": "index.js"
+  },
+  "files": [
+    "*.js",
+    "!.eslintrc.js"
+  ],
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "commander": "^6.2.0",
+    "electrum-cash": "^2.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0"
+  }
+}
