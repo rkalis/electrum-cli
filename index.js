@@ -27,6 +27,8 @@ const sendRequest = async (method, methodArgs, program) => {
 
   if (response instanceof Error) {
     console.error(response.message)
+  } else if (typeof response === 'object') {
+    console.log(JSON.stringify(response, null, 2))
   } else {
     console.log(response)
   }
