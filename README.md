@@ -31,8 +31,10 @@ To inspect the full specification, see the [ElectrumX documentation](https://ele
 ### Examples
 
 #### Request the genesis block header on BTC
+```
 $ electrum-cli blockchain.transaction.get f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16 --btc
 0100000000000000000000000000000000000000000000000000000000000000000000003ba3edfd7a7b12b27ac72c3e67768f617fc81bc3888a51323a9fb8aa4b1e5e4a29ab5f49ffff001d1dac2b7c
+```
 
 #### Request the Hal Finney transaction on BCH
 ```
