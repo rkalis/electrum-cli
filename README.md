@@ -28,6 +28,14 @@ To inspect the full specification, see the [ElectrumX documentation](https://ele
 ### Supported chains
 `electrum-cli` allows you to specify a custom server and protocol version. As such, it is compatible with all cryptocurrencies that support the electrum protocol, such as BTC, BCH and LTC. For convenience, you can use the `--btc` or `--bch` flags to connect to a default electrum server for the BTC and BCH networks, respectively. These default servers are `electrumx-core.1209k.com:50002` for BTC and `bch.imaginary.cash:50002` for BCH.
 
+### Shell aliases
+If you find yourself using the same requests often, it can be useful to set up aliases in your Bash/Zsh/Fish config.
+
+```bash
+alias get-bch-tx="electrum-cli --bch blockchain.transaction.get"
+alias get-btc-blockk-header="electrum-cli --btc blockchain.block.header"
+```
+
 ### Examples
 
 #### Request the genesis block header on BTC
