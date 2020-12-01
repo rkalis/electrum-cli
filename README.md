@@ -33,7 +33,7 @@ If you find yourself using the same requests often, it can be useful to set up a
 
 ```bash
 alias get-bch-tx="electrum-cli --bch blockchain.transaction.get"
-alias get-btc-blockk-header="electrum-cli --btc blockchain.block.header"
+alias get-btc-block-header="electrum-cli --btc blockchain.block.header"
 ```
 
 ### Examples
