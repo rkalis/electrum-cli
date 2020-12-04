@@ -19,9 +19,9 @@ const sendRequest = async (method, methodArgs, program) => {
 
   const electrum = new ElectrumClient('electrum-cli', opts.version, host, port)
 
-  const connectionStatus = await electrum.connect()
-
-  ensure(connectionStatus, `Could not connect to ${server}`)
+  await electrum.connect().catch(() => {
+    abort(`Could not connect to ${server}`)
+  })
 
   const response = await electrum.request(method, ...methodArgs)
 
