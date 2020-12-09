@@ -1,6 +1,6 @@
 {
   "name": "electrum-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Quickly make requests to an electrum server with a simple CLI",
   "repository": "git@github.com:rkalis/electrum-cli.git",
   "license": "MIT",
