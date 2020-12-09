@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 const { program } = require('commander')
 const { ElectrumClient } = require('electrum-cash')
-const { ensure, parseValue } = require('./util')
+const { ensure, abort, parseValue } = require('./util')
 
 const sendRequest = async (method, methodArgs, program) => {
   const opts = program.opts()
@@ -19,9 +19,11 @@ const sendRequest = async (method, methodArgs, program) => {
 
   const electrum = new ElectrumClient('electrum-cli', opts.version, host, port)
 
-  const connectionStatus = await electrum.connect()
-
-  ensure(connectionStatus, `Could not connect to ${server}`)
+  try {
+    await electrum.connect()
+  } catch (error) {
+    abort(`Could not connect to ${server}\nReason: ${error.message}`)
+  }
 
   const response = await electrum.request(method, ...methodArgs)
 
