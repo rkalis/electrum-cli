@@ -22,7 +22,7 @@ const sendRequest = async (method, methodArgs, program) => {
   try {
     await electrum.connect()
   } catch (error) {
-    abort(`Could not connect to ${server} due to ${error}`)
+    abort(`Could not connect to ${server}\nReason: ${error.message}`)
   }
 
   const response = await electrum.request(method, ...methodArgs)
